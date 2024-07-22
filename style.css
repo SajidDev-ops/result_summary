@@ -1,0 +1,346 @@
+/* Base styles (for larger screens) */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    /* Optional: background color for the whole page */
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    /* Stretch children to have equal height */
+    justify-content: center;
+}
+
+.mark,
+.beside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    /* Optional: adds rounded corners */
+    text-align: center;
+    width: 300px;
+}
+
+.mark {
+    position: relative;
+    left: 40px;
+    background-color: blue;
+    color: white;
+    margin-right: 20px;
+    /* Add space between the sections */
+}
+
+.beside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center the content vertically */
+    align-items: center;
+    /* Center the content horizontally */
+    height: 420px;
+    min-width: 400px;
+    background-color: white;
+    color: black;
+    padding: 40px;
+    border-bottom: 2px solid whitesmoke;
+    border-left: 2px solid whitesmoke;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.continue {
+    display: flex;
+    justify-content: center;
+    /* Center the button horizontally */
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+
+
+.up {
+    font-size: larger;
+    width: 200px;
+}
+
+.big {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: darkblue;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* Circular border */
+}
+
+.big-font {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.small {
+    margin: 0;
+    font-size: smaller;
+}
+
+.heading {
+    font-size: larger;
+}
+
+.beside div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.beside img {
+    width: 30px;
+    /* Adjust size as needed */
+    height: 30px;
+    /* Adjust size as needed */
+}
+
+.beside .score {
+    margin-left: auto;
+}
+
+.Summary {
+    font-size: 2rem;
+    /* Increase font size */
+    font-weight: bold;
+    /* Increase font weight */
+    margin-bottom: 20px;
+    /* Optional: add space below the Summary */
+    padding-left: 20px;
+    /* Add padding on the left */
+}
+
+.Image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    /* Add padding inside each Image section */
+    border-radius: 40px;
+    /* Add border-radius to round corners */
+    background-color: bisque;
+    /* Optional: background color for visual clarity */
+    margin-bottom: 10px;
+    /* Add space between Image sections */
+    flex-direction: row;
+    /* Ensure items are in a row by default */
+}
+
+.continue {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* Ensure it takes up the full width */
+    margin-top: 20px;
+    /* Space above the button */
+    padding-top: 10px;
+    /* Space above the button */
+}
+
+.continue button {
+    padding: 10px 160px;
+    /* Adjust padding as needed */
+    border: none;
+    background-color: darkblue;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    /* Adjust font size if needed */
+}
+
+button:hover {
+    background-color: aqua;
+    color: red;
+}
+
+/* Media queries for mobile screens */
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    article {
+        flex-direction: column;
+    }
+
+    .mark {
+        position: static;
+        /* Remove relative positioning */
+        margin: 0;
+        /* Remove margin to center it */
+        width: 100%;
+        /* Make it take full width */
+    }
+
+    .beside {
+        min-width: 100%;
+        height: auto;
+        /* Allow height to adjust based on content */
+        padding: 20px;
+        /* Adjust padding */
+    }
+
+    .Image {
+        flex-direction: row;
+        /* Stack items vertically */
+        align-items: flex-start;
+        /* Align items to the start */
+    }
+
+    .Image p {
+        margin: 5px 0;
+        /* Add space between text items */
+    }
+
+    .continue button {
+        padding: 20px 150px;
+        /* Adjust button padding for smaller screens */
+    }
+}
+
+/* body {
+margin: 0;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #f0f0f0;
+}
+
+article {
+display: flex;
+flex-direction: row;
+align-items: stretch;
+justify-content: center;
+}
+
+.mark, .beside {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+width: 300px;
+}
+
+.mark {
+position: relative;
+left: 40px;
+background-color: blue;
+color: white;
+margin-right: 20px;
+}
+
+.beside {
+height: 420px;
+min-width: 400px;
+background-color: whitesmoke;
+color: black;
+padding: 40px;
+}
+
+.up {
+font-size: larger;
+width: 200px;
+}
+
+.big {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: darkblue;
+width: 150px;
+height: 150px;
+border-radius: 50%;
+}
+
+.big-font {
+font-size: 4rem;
+margin: 0;
+}
+
+.small {
+margin: 0;
+font-size: smaller;
+}
+
+.heading {
+font-size: larger;
+}
+
+.beside div {
+display: flex;
+width: 100%;
+align-items: center;
+justify-content: space-between;
+margin: 5px 0;
+}
+
+.beside img {
+width: 30px;
+height: 30px;
+}
+
+.beside .score {
+margin-left: auto;
+}
+
+.Summary {
+font-size: 2rem;
+font-weight: bold;
+margin-bottom: 20px;
+padding-left: 20px;
+}
+
+.Image {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px;
+border-radius: 10px;
+background-color: bisque;
+margin-bottom: 10px;
+flex-direction: row;
+}
+
+.continue {
+display: flex;
+justify-content: center;
+width: 100%;
+margin-top: 20px;
+padding-top: 20px;
+}
+
+.continue button {
+padding: 20px 160px;
+border: none;
+background-color: darkblue;
+color: white;
+border-radius: 25px;
+cursor: pointer;
+font-size: 1rem;
+}
+*/
